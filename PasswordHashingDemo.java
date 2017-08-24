@@ -1,3 +1,4 @@
+// From https://dzone.com/articles/storing-passwords-java-web
 package com.samuel;
 
 import java.security.MessageDigest;
