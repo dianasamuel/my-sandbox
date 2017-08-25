@@ -28,6 +28,27 @@ public class BitwiseTest {
 
 		      c = a >>> 2;      /* 15 = 0000 1111 */
 		      System.out.println("a >>> 2 = " + c );
+		      
+		      
+		      int d = 5; /* 0101 */
+		      int e = d >>> 1;
+		      System.out.println("d >>> 1  = " + e );
+		      
+		      int f = -60; 	    // 11111111111111111111111111000100 
+//		      System.out.println("f=" + Integer.toBinaryString(f));
+//		      int h = f >>> 1;  //  01111111111111111111111111100010
+//		      System.out.println("f >>> 1  = " + h );
+//		  //    System.out.println("h=" + Integer.toBinaryString(h));
+//		      System.out.println("h=01111111111111111111111111100010");
+//		      int i = f >>> 20;
+//		      System.out.println("f >>> 20  = " + i );
+//		      System.out.println(Integer.toBinaryString(i));
+//		       
+//		      System.out.println("f=" + (f>>2));
+		      System.out.println("f=" + Integer.toBinaryString(f>>2)); // notice how sign does not change
+		      
+		      // f=111111111111111111111111110001 same as f=00111111111111111111111111110001
+		      System.out.println("f=" + Integer.toBinaryString(f>>>2));// notice how sign has changed since it is a negative
 		   }
 /*
 
@@ -51,5 +72,9 @@ a >> 2  = 15
 
 a >>> 2 = 15
 (ie. 0011 1100 >>> 2 = 0000 1111 - unsigned right shift, will shift sign bit, replacing with zero - a little unsure)
+ So >> preserves the sign, while >>> doesn't.  >> is referred to as the arithmetic shift and >>> is the logical shift.
+ https://stackoverflow.com/questions/1034640/javas-versus-operator
+ more examples above
+ * 
  * */
 }
